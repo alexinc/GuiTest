@@ -105,7 +105,7 @@ public class ClientEditor extends javax.swing.JPanel {
 
         personalPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        firstNameLabel.setText("First Name:"); // NOI18N
+        firstNameLabel.setText("Name"); // NOI18N
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${client.firstName}"), firstNameTextField, org.jdesktop.beansbinding.BeanProperty.create("text"), "firstName"); // NOI18N
         bindingGroup.addBinding(binding);
@@ -193,7 +193,7 @@ public class ClientEditor extends javax.swing.JPanel {
                     .add(sexLabel)
                     .add(femaleRadioButton)
                     .add(maleRadioButton))
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
         clientInfoPane.addTab("Personal", personalPanel);
@@ -264,15 +264,15 @@ public class ClientEditor extends javax.swing.JPanel {
 
         clientInfoPane.addTab("Contact", contactPanel);
 
-        usernameLabel.setFont(new java.awt.Font("Dialog", 1, 24));
+        usernameLabel.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("${client.firstName} ${client.surname}"), usernameLabel, org.jdesktop.beansbinding.BeanProperty.create("text"), "displayNameTitle");
         bindingGroup.addBinding(binding);
 
-        clientInfoLabel.setFont(new java.awt.Font("Dialog", 0, 24));
+        clientInfoLabel.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         clientInfoLabel.setText("Client Info:"); // NOI18N
 
-        validationMsgLabel.setFont(new java.awt.Font("Dialog", 1, 11));
+        validationMsgLabel.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
         validationMsgLabel.setForeground(new java.awt.Color(255, 0, 0));
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(this);
@@ -282,12 +282,12 @@ public class ClientEditor extends javax.swing.JPanel {
             .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, clientInfoPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, clientInfoPane)
                     .add(org.jdesktop.layout.GroupLayout.LEADING, layout.createSequentialGroup()
                         .add(clientInfoLabel)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                        .add(usernameLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE))
-                    .add(org.jdesktop.layout.GroupLayout.LEADING, validationMsgLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE))
+                        .add(usernameLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .add(org.jdesktop.layout.GroupLayout.LEADING, validationMsgLabel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
